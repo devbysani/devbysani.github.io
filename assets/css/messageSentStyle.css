@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Karla:wght@300;400;500;600;700;800&&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+/*--------------------------------------------------------------
+# The Start
+--------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html body {
+  background-color: #040404;
+}
+
+:root {
+    --main-color: #17a2b8;
+    --section-title: #f5f5f5;
+    --h1-before: #cccccc;
+    --h-s-p: #0a0a0a;
+    --A-S-C: #121212;
+    --button-text: #fff;
+    --abt-foot: #b0b0b0;
+    --heading-text: #333333;
+}
+a {
+  text-decoration: none !important;
+}
+/* button-1 btn start */
+.button-1 {
+  margin: 10px auto;
+  height: 55px;
+  outline: none;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.45s;
+  position: relative;
+  padding: 15px 30px;
+  align-items: center;
+  transition-delay: 0s;
+  justify-content: center;
+  background: transparent;
+  color: var(--button-text);
+  text-transform: uppercase;
+  border: 2px solid var(--main-color);
+}
+
+
+.button-1:hover {
+  transition-delay: 0.5s;
+  color: #fff;
+}
+
+.button-1 span {
+  z-index: 100;
+  position: relative;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+}
+
+.button-1::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  background: var(--main-color);
+  box-shadow: 5px -8px 0 var(--main-color), 5px 8px 0 var(--main-color);
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.button-1:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 var(--main-color), 5px 0 0 var(--main-color);
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+
+.button-1::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  background: var(--main-color);
+  box-shadow: -5px -8px 0 var(--main-color), -5px 8px 0 var(--main-color);
+  transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.button-1:hover::after {
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  box-shadow: -5px 0 0 var(--main-color), -5px 0 0 var(--main-color);
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+
+#home .row {
+  --bs-gutter-x: 4.5rem;
+}
+
+/*--------------------------------------------------------------
+# Media Queries Home
+--------------------------------------------------------------*/
+@media only screen and (max-width: 990px) {
+  #home .row {
+    --bs-gutter-x: 1.5rem;
+  }
+  
+  #home h3 {
+    text-align: center;
+  }
+
+  #home .full {
+    text-align: center;
+  }
+
+  #home p {
+    text-align: center;
+    align-items: center;
+  }
+
+  #home button {
+    height: 45px;
+    margin: auto;
+    font-size: 14px;
+  }
+
+  .br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #home .full {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  #home .profile {
+    width: 18rem;
+    height: 18rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  #home p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  #home h3 {
+    font-size: 1.2rem;
+  }
+
+  #home .full {
+    font-size: 1.6rem;
+  }
+
+  #home p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #home h3 {
+    font-size: 1.1rem;
+  }
+  #home .full {
+    font-size: 1.5rem;
+  }
+
+  #home button {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #home h3 {
+    font-size: 1rem;
+  }
+
+  #home .full {
+    font-size: 1.4rem;
+  }
+
+  #home p {
+    font-size: 0.7rem;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+
+.section-title h1 {
+  font-family: "Jost", sans-serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  position: relative;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--section-title);
+}
+
+.section-title h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 130px;
+  height: 1px;
+  background: var(--h1-before);
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--main-color);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title h2{
+    color: #cccccc;
+}
+
+/*--------------------------------------------------------------
+# Media Queries Section
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  .section-title h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .section-title h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .section-title h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .section-title h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about {
+  background-color: var(--A-S-C);
+  height: 100vh;
+}
+
+.abme {
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--abt-foot);
+  letter-spacing: 0.03rem;
+}
+
+div .abme .tcolor {
+  color: var(--main-color);
+}
+
+.heading {
+  font-size: 4.5rem;
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: -84px;
+  text-transform: uppercase;
+  color: var(--heading-text);
+  font-family: "Jost", sans-serif;
+}
+
+.heading2 {
+  font-family: "Jost", sans-serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  color: var(--heading-text);
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Media Queries About
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 4rem;
+  }
+
+  .heading2 {
+    font-size: 4rem;
+  }
+
+  .abme {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 25.5px;
+    letter-spacing: 0.03rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .heading2 {
+    font-size: 3.5rem;
+  }
+
+  .abme {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .heading2 {
+    font-size: 3rem;
+  }
+
+  .abme {
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.03rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .heading2 {
+    font-size: 2.5rem;
+  }
+
+  .abme {
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+  }
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#copyR {
+  background-color: var(--h-s-p);
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.copyR p {
+  font-family: "Jost", sans-serif;
+  letter-spacing: 0.7px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--abt-foot);
+  font-size: 17px;
+}
+/*--------------------------------------------------------------
+# THE END
+--------------------------------------------------------------*/
